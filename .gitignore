@@ -1,5 +1,5 @@
 _view/
 node_modules
 .DS_Store
-design/
+.design/
 sassdocs
