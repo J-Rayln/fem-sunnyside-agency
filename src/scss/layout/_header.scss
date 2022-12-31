@@ -1,20 +1,24 @@
-
-
-
 .header {
-  background-color: #3DBEFF;
+  background-color: #3dbeff;
 
   &__wrapper {
-    background-image: url('/assets/images/mobile/image-header.jpg');
+    background-image: url("/assets/images/mobile/image-header.jpg");
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    justify-content: space-between;
   }
 
   @include respond-above(lg) {
-
     &__wrapper {
-      background-image: url('/assets/images/desktop/image-header.jpg');
+      background-image: url("/assets/images/desktop/image-header.jpg");
+    }
+  }
+
+  .nav {
+    &__item {
+      display: inline-block;
     }
   }
 }

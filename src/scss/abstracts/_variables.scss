@@ -4,40 +4,54 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/// Map of colors.  Key, value pairs are used to create CSS custom properties 
+/// Map of colors.  Key, value pairs are used to create CSS custom properties
 /// stored in the `:root` element.
 /// @type Map
 
 $colors: (
-    "primary": (
-        "100":    hsl(7, 99%, 70%),   // Soft red
-        "200":    hsl(51, 100%, 49%), // Yellow
-        '300':    hsl(167, 40%, 24%), // Dark desaturated cyan (graphic design text)
-        '400':    hsl(198, 62%, 26%), // Dark blue (photography text)
-        '500':    hsl(168, 34%, 41%), // Dark moderate cyan (footer)
-    ),
-    "neutral": (
-        "100":    hsl(212, 27%, 19%), // Very dark desaturated blue
-        "200":    hsl(213, 9%, 39%),  // Very dark grayish blue
-        "300":    hsl(232, 10%, 55%), // Dark grayish blue
-        "400":    hsl(210, 4%, 67%),  // Grayish blue
-        "500":    hsl(0, 0%, 100%),   // White
-    ),
+	'primary': (
+		'100': hsl(7, 99%, 70%),
+		// Soft red
+		'200': hsl(51, 100%, 49%),
+		// Yellow
+		'300': hsl(167, 40%, 24%),
+		// Dark desaturated cyan (graphic design text)
+		'400': hsl(198, 62%, 26%),
+		// Dark blue (photography text)
+		'500': hsl(168, 34%, 41%),
+		// Dark moderate cyan (footer)
+	),
+	'neutral': (
+		'100': hsl(212, 27%, 19%),
+		// Very dark desaturated blue
+		'200': hsl(213, 9%, 39%),
+		// Very dark grayish blue
+		'300': hsl(232, 10%, 55%),
+		// Dark grayish blue
+		'400': hsl(210, 4%, 67%),
+		// Grayish blue
+		'500': hsl(0, 0%, 100%),
+		// White
+	),
 );
 
-
-/// Breakpoints used to build media queries and define min-max points for 
+/// Breakpoints used to build media queries and define min-max points for
 /// variable font sizes and other viewport-related `clamp()` values.
 /// @type Map
 /// @prop {string} breakpoint-name 2-character breakpoint name
-/// @prop {number} breakpoint-width 
-$breakpoints:  (
-  "xs":  25em, // 400px
-  "sm":  34em, // 544px
-  "md":  48em, // 768px
-  "lg":  60em, // 960px
-  "xl":  80em, // 1280px
-  "xxl": 90em  // 1440px
+/// @prop {number} breakpoint-width
+$breakpoints: (
+	'xs': 25em,
+	// 400px
+	'sm': 34em,
+	// 544px
+	'md': 48em,
+	// 768px
+	'lg': 60em,
+	// 960px
+	'xl': 80em,
+	// 1280px
+	'xxl': 90em // 1440px,
 );
 
 /// Maximum container width for the site.<br>
@@ -49,44 +63,50 @@ $container-max-width: rem(1440);
 /// Used as the default value for the `$min-width` argument in the `fluid-font()`
 /// function.
 /// @see {function} fluid-font
-$vpmin: math.div(map-get($breakpoints, "xs"), 1em) * 1rem;
+$vpmin: math.div(map-get($breakpoints, 'xs'), 1em) * 1rem;
 
 /// Used as the default value for the `$max-width` argument in the `fluid-font()`
 /// function.
 /// @see {function} fluid-font
-$vpmax: math.div(map-get($breakpoints, "lg"), 1em) * 1rem;
+$vpmax: math.div(map-get($breakpoints, 'lg'), 1em) * 1rem;
 
 /// Map of font stacks by type/element.  Lists of fonts should be enclsoed in
 /// paremthases `()` to preserve commas.
 /// @type Map
 $font-families: (
-    "primary": ('Barlow', sans-serif),
-    "secondary": ('Fraunces', serif),
+	'primary': (
+		'Barlow',
+		sans-serif,
+	),
+	'secondary': (
+		'Fraunces',
+		serif,
+	),
 );
 
 /// Min/Max font sizes used for fluid font sizes.  Values in this map are used
 /// to build `clamp()` values for CSS custom properties stored in the `:root`
 /// element.
-/// * Font sizes MUST be in rems for clamp function to work.
-/// * Ff there is no min/max, set the 'min' and 'max' to the SAME value.
-/// * Comment out values you don't need or add more using the same format.
+/// - Font sizes MUST be in rems for clamp function to work.
+/// - Ff there is no min/max, set the 'min' and 'max' to the SAME value.
+/// - Comment out values you don't need or add more using the same format.
 $font-sizes: (
-    "body": (
-        "min": rem(16),
-        "max": rem(18) 
-    ),
-    "h1": (
-        "min": rem(36),
-        "max": rem(44)
-    ),
-    "h2": (
-        "min": rem(28),
-        "max": rem(36)
-    ),
-    "h3": (
-        "min": rem(26),
-        "max": rem(28)
-    ),
+	'body': (
+		'min': rem(16),
+		'max': rem(18),
+	),
+	'h1': (
+		'min': rem(36),
+		'max': rem(44),
+	),
+	'h2': (
+		'min': rem(28),
+		'max': rem(36),
+	),
+	'h3': (
+		'min': rem(26),
+		'max': rem(28),
+	),
 );
 
 /// Base font size.  This value is used for mixins and functions that convert
@@ -98,7 +118,7 @@ $base-font-size: 16;
 /// element.  Comment out or add what you need.
 /// @type Map
 $font-weights: (
-    "semibold": 600,
-    "bold":   700,
-    "black":  900,
+	'semibold': 600,
+	'bold': 700,
+	'black': 900,
 );
